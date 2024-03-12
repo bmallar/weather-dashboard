@@ -1,0 +1,10 @@
+.head {
+    font-family: Comic Impact,  sans-serif, Arial;
+    font-size: 16px;
+    background-color:darkblue; 
+    color:white;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
