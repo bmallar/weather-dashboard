@@ -11,9 +11,8 @@ const searchHandler = function (event) {
         getWeather(searcher);
 
         searchInputEl.value = '';
-    } else {
-        alert(`please enter a City`);
-    }
+    } 
+        
 
 
 }
@@ -28,7 +27,9 @@ const getWeather = function (city) {
             response.json().then(function(data) {
                 console.log(data);
                 displayWeather(data, city);
-            })
+            });
+        } else {
+            alert(`Error: Enter a city`);
         }
     })
 }
