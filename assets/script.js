@@ -11,7 +11,7 @@ const searchHandler = function (event) {
         getWeather(searcher);
         displayWeather(searcher)
 
-        var historyBtn = document.createElement("button")
+        const historyBtn = document.createElement("button")
         historyBtn.textContent = searcher
         document.getElementById("searchHistory").append(historyBtn)
 
@@ -96,5 +96,5 @@ const displayWeather = function (city) {
 
 
 
-searchHistoryBtn.addEventListener('click', searchHandler);
-// historyBtn.addEventListener('click', searchHandler);
+searchBtnEl.addEventListener('click', searchHandler);
+historyBtn.addEventListener('click', searchHandler);
