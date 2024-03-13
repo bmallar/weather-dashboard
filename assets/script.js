@@ -46,7 +46,7 @@ const getWeather = function (city) {
                     icon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
 
                     var windSpeed = document.createElement("h3")
-                    windSpeed.textContent = "Wind Speed" + data.wind.speed + "MPH"
+                    windSpeed.textContent = "Wind Speed: " + data.wind.speed + " MPH"
                     weatherCard.append(icon, currentTemp, windSpeed, humidity)
                     document.getElementById("currentWeather").append(weatherCard)
                 });
@@ -78,10 +78,10 @@ const displayWeather = function (city) {
                         humidity.textContent = "Humidity: " + element.main.humidity + "%"
 
                         var icon = document.createElement("img")
-                        icon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`)
+                        icon.setAttribute("src", `https://openweathermap.org/img/wn/${element.weather[0].icon}@2x.png`)
 
-                        var windSpeed = document.createElement("h3")
-                        windSpeed.textContent = "Wind Speed" + data.wind.speed + "MPH"
+                        var windSpeed = document.createElement("p")
+                        windSpeed.textContent = "Wind Speed: " + element.wind.speed + " MPH"
 
                         forecastCard.append(icon, forecastTemp, windSpeed, humidity)
                         document.getElementById("forecast").append(forecastCard)
