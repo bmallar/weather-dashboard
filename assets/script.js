@@ -96,5 +96,5 @@ const displayWeather = function (city) {
 
 
 
-
-searchBtnEl.addEventListener('click', searchHandler);
+searchHistoryBtn.addEventListener('click', searchHandler);
+// historyBtn.addEventListener('click', searchHandler);
