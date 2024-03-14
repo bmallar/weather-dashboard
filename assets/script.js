@@ -4,24 +4,27 @@ const searchBtnEl = document.querySelector('#search-btn');
 
 const searchHandler = function (event) {
     event.preventDefault();
-
-    const searcher = searchInputEl.value.trim();
+    historyBtn = document.createElement("button")
+    const searcher = searchInputEl.value.trim() || event.target.textContent;
 
     if (searcher) {
         getWeather(searcher);
         displayWeather(searcher)
 
-        const historyBtn = document.createElement("button")
+        let historyBtn = document.createElement("button")
         historyBtn.textContent = searcher
-        document.getElementById("searchHistory").append(historyBtn)
+        historyBtn.addEventListener('click', searchHandler);
+        
 
         searchInputEl.value = '';
+        document.getElementById("searchHistory").appendChild(historyBtn)
     }
 
-
+historyBtn = document.createElement("button").appendChild(historyBtn)
 
 }
-
+historyBtn = document.createElement("button");
+historyBtn.addEventListener('click', searchHandler)
 
 const getWeather = function (city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9898dc8d721936b2fb56457b35b82a47&units=imperial`
@@ -97,4 +100,3 @@ const displayWeather = function (city) {
 
 
 searchBtnEl.addEventListener('click', searchHandler);
-historyBtn.addEventListener('click', searchHandler);
