@@ -8,3 +8,19 @@
     box-sizing: border-box;
     display: inline-block;
 }
+
+#searchHistory {
+    display: block;
+    width: 20%;
+    
+}
+
+#currentWeather {
+    background-color: blue;
+}
+
+#forecast {
+    display: flex;
+     flex-direction: row;
+    background-color: lightskyblue;
+}
