@@ -42,5 +42,5 @@ Then I made an else to for an alert to pop enter a city.
 
 I made a for loop in the forecst function to grab 8 of the posts in the array because 3 hours is each one 3 * 8 equals 24 hours.
 
-![visit my page here](<https://bmallar.github.io/weather-dashboard/>)
+![visit my page here] 
 ![My project](./assets/Screenshot%20(15).png)
